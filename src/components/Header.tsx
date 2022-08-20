@@ -1,3 +1,4 @@
+import '../styles/Header.css';
 
 interface HeaderProps {
   score: number;

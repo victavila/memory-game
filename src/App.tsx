@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
 import Header from './components/Header';
 import Game from './components/Game';
 import uniqid from "uniqid";

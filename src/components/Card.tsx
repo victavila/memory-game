@@ -1,3 +1,5 @@
+import '../styles/Card.css';
+
 interface CardProperties {
   name: string,
   image: string,

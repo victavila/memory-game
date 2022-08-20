@@ -1,0 +1,13 @@
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.best-score, .current-score {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+

@@ -1,4 +1,5 @@
 import Card from './Card';
+import '../styles/Game.css';
 
 interface GameProps {
   characters: {name: string, image: string, id: string}[],
