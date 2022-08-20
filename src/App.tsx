@@ -17,9 +17,16 @@ const App = () => {
 
   const fetchCharacters = async () => {
     const response = await jikanjs.loadAnime(11061, 'characters_staff');
-    const characters = await response.characters.filter((character: { mal_id: number; name: string; }) => character.mal_id < 5000 || character.name === "Netero, Isaac");
+    const characters = await response.characters.filter((character: { mal_id: number; name: string; }) => character.mal_id < 5000 || character.name === "Meruem");
     characters.forEach((character: { name: string; image_url: string; }) => {
-      setCharacters((prevArr) => [...prevArr, {name: character.name.split(", ")[1], image: character.image_url, id: uniqid()}])
+      const characterArray = character.name.split(", ");
+      let characterName: string;
+      if (characterArray[1] === undefined) {
+        characterName = characterArray[0];
+      } else {
+        characterName = characterArray[1];
+      }
+      setCharacters((prevArr) => [...prevArr, {name: characterName, image: character.image_url, id: uniqid()}])
     });
   };
 
